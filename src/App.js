@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import HelloWorld from "./components/HelloWorld";
 
 function App() {
+  const name = "Jofre";
+  const sobre = "Tomas";
+
+  const img1 = "https://viaplaceholder.com/150";
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2> Alterando o JSX</h2>
+      <p>
+        Olá, {name} {sobre}
+      </p>
+      <img src={img1} alt="minha img" />
+      <HelloWorld />
     </div>
   );
 }
