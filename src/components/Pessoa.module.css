@@ -1,0 +1,10 @@
+.pessoaContainer {
+  background-color: blue;
+  border: 1px solid #025617;
+}
+
+.pessoaContent {
+  color: #ffffff;
+  background-color: #333;
+  margin: 0;
+}

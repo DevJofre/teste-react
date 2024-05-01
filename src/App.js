@@ -1,21 +1,16 @@
-import logo from "./logo.svg";
 import "./App.css";
 import HelloWorld from "./components/HelloWorld";
+import SayMyName from "./components/SayMyName";
+import Pessoa from "./components/Pessoa";
 
 function App() {
   const name = "Jofre";
-  const sobre = "Tomas";
-
-  const img1 = "https://viaplaceholder.com/150";
+  const idade = "55";
+  const profissao = "Desenvolvedor";
 
   return (
     <div className="App">
-      <h2> Alterando o JSX</h2>
-      <p>
-        Olá, {name} {sobre}
-      </p>
-      <img src={img1} alt="minha img" />
-      <HelloWorld />
+      <Pessoa nome={name} idade={idade} profissao={profissao} />
     </div>
   );
 }
