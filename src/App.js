@@ -1,17 +1,21 @@
-import { useState } from "react";
-import "./App.css";
-import SeuNome from "./components/SeuNome";
-import Saudacao from "./components/Saudacao";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import Contato from "./pages/Contatos";
+import Empresa from "./pages/Empresa";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
 
 function App() {
-  const [nome, setNome] = useState();
-
   return (
-    <div className="App">
-      <h1>State lift</h1>
-      <SeuNome setNome={setNome} />
-      <Saudacao nome={nome} />
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" exact element={<Home />}></Route>
+        <Route path="/contato" element={<Contato />}></Route>
+        <Route path="/empresa" element={<Empresa />}></Route>
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
